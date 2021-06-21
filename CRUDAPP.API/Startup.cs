@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CRUDAPP.API.Extension;
 using CRUDAPP.DATA.Gateway;
 using Microsoft.EntityFrameworkCore;
 
@@ -30,6 +31,7 @@ namespace CRUDAPP.API
         {
 
             services.AddControllers();
+            services.AddServices(Configuration);
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "CRUDAPP.API", Version = "v1" });
