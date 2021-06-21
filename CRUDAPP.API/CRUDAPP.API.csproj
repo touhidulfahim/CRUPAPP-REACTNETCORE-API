@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CRUDAPP.COMMON\CRUDAPP.COMMON.csproj" />
+    <ProjectReference Include="..\CRUDAPP.DATA\CRUDAPP.DATA.csproj" />
+    <ProjectReference Include="..\CRUDAPP.ENTITIES\CRUDAPP.ENTITIES.csproj" />
+    <ProjectReference Include="..\CRUDAPP.SERVICE\CRUDAPP.SERVICE.csproj" />
+  </ItemGroup>
+
+</Project>
