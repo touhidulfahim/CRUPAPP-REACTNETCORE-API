@@ -11,6 +11,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CRUDAPP.DATA.Gateway;
+using Microsoft.EntityFrameworkCore;
 
 namespace CRUDAPP.API
 {
@@ -35,8 +37,8 @@ namespace CRUDAPP.API
 
 
 
-            // var connection = Configuration.GetConnectionString("DatabaseConnection");
-            // services.AddDbContext<ReactNetDbContext>(options => options.UseSqlServer(connection));
+            var connection = Configuration.GetConnectionString("DatabaseConnection");
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connection));
 
 
 
